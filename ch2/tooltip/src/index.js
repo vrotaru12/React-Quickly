@@ -11,13 +11,17 @@ class Menu extends React.Component{
             'Contacts'
         ]
         return(
-            <div>
-                {menus.map((i, v) => (
-                <div key={i}>
-                    <Link label={i}/>
-                    </div>
-                    ))
-                }
+            <div className="navbar">
+                <div className="navbar-inner">
+                    <ul className="nav">
+                        {menus.map((i, v) => (
+                        <li key={i}>
+                            <Link label={i}/>
+                        </li>
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         );
     }
@@ -27,9 +31,7 @@ class Link extends React.Component{
     render(){
         let url = '/' + this.props.label;
         return(
-            <div>
-                <a href={url}> {this.props.label}</a>
-            </div>
+            <a className="navbar-brand" href={url}> {this.props.label}</a>
         );
     }
 
