@@ -2,6 +2,39 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 
+class Menu extends React.Component{
+    render(){
+        let menus = [
+            'Home',
+            'About',
+            "Services", 
+            'Contacts'
+        ]
+        return(
+            <div>
+                {menus.map((i, v) => (
+                <div key={i}>
+                    <Link label={i}/>
+                    </div>
+                    ))
+                }
+            </div>
+        );
+    }
+}
+
+class Link extends React.Component{
+    render(){
+        let url = '/' + this.props.label;
+        return(
+            <div>
+                <a href={url}> {this.props.label}</a>
+            </div>
+        );
+    }
+
+}
+
 class Tooltip extends  React.Component{
     constructor(props){
         super(props);
@@ -42,6 +75,7 @@ class Tooltip extends  React.Component{
                         </div>
                     </div>
                 </div>
+                
             </div>
         );
     }
@@ -55,3 +89,7 @@ ReactDOM.render(<div>
     The main focus of this post is to compare the four Node.js/Io.js frameworks: <Tooltip text="HTTP API server">Hapi</Tooltip>, <Tooltip text="Release the Kraken!">Kraken</Tooltip>, <Tooltip text="Sail away">Sails.js</Tooltip> and <Tooltip text="IBM of frameworks">Loopback</Tooltip>. There are many other frameworks to consider, but I had to draw the line somewhere.
   </div>,
  document.getElementById('tooltip'));
+
+ ReactDOM.render(
+     <Menu/> ,
+ document.getElementById('menu'));
