@@ -26,8 +26,8 @@ class Tooltip extends  React.Component{
         let style = {
            zIndex: (this.state.opacity) ? 1000 : -1000,
            opacity: +this.state.opacity,
-           top: (this.state.top || 0) + 20,
-           left: (this.state.left || 0) - 30
+           top: (this.state.top || 0) + 15,
+           left: (this.state.left || 0) - 2
         }
 
         return(

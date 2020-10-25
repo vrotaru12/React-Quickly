@@ -6083,11 +6083,11 @@ button.close {
 .tooltip-inner {
   padding: 2px 400px;
   padding-left: 10px;
+  padding:auto;
   color: #ffffff;
   text-align: justify;
   background-color: #000000;
   border-radius: 4px;
-  /* white-space: nowrap; */
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: pre;
