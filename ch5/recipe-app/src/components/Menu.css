@@ -23,8 +23,8 @@ article>header {
     color: rgb(27, 114, 70);
     border-bottom: solid 2px rgb(95, 92, 86);
     margin-bottom: 1em;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left:  20%;
+    margin-right:  20%;
 }
 
 div.recipes>section {
@@ -32,7 +32,7 @@ div.recipes>section {
     padding: 1em 1em 2em;
     background-color: rgb(145, 137, 137);
     margin-bottom: 1em;
-    margin-right: 2em;
-    margin-left: 2em;
+    margin-right: 20%;
+    margin-left: 20%;
 
 }
